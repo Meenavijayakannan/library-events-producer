@@ -1,0 +1,209 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 266338304 bytes for Failed to commit area from 0x0000000703600000 to 0x0000000713400000 of length 266338304.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (t:/workspace/open/src/hotspot/os/windows/os_windows.cpp:3301), pid=5180, tid=16316
+#
+# JRE version:  (13.0+33) (build )
+# Java VM: OpenJDK 64-Bit Server VM (13+33, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=127.0.0.1:50471 -Dfile.encoding=windows-1252 -Duser.country=US -Duser.language=en -Duser.variant com.learnkafka.LibraryEventsProducerApplication
+
+Host: Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz, 8 cores, 15G,  Windows 10 , 64 bit Build 18362 (10.0.18362.1110)
+Time: Fri Jun 18 12:04:30 2021 India Standard Time elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000022dbc27f000):  JavaThread "Unknown thread" [_thread_in_vm, id=16316, stack(0x0000008cb8e00000,0x0000008cb8f00000)]
+
+Stack: [0x0000008cb8e00000,0x0000008cb8f00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x626eaa]
+V  [jvm.dll+0x772c4a]
+V  [jvm.dll+0x7743ff]
+V  [jvm.dll+0x774a03]
+V  [jvm.dll+0x24da38]
+V  [jvm.dll+0x62436a]
+V  [jvm.dll+0x618f55]
+V  [jvm.dll+0x30c5fc]
+V  [jvm.dll+0x30c432]
+V  [jvm.dll+0x311ba6]
+V  [jvm.dll+0x355cc6]
+V  [jvm.dll+0x3554a0]
+V  [jvm.dll+0x2e727a]
+V  [jvm.dll+0x2e8512]
+V  [jvm.dll+0x74fcb8]
+V  [jvm.dll+0x363719]
+V  [jvm.dll+0x732da5]
+V  [jvm.dll+0x3ce2cf]
+V  [jvm.dll+0x3d05f1]
+C  [jli.dll+0x51ff]
+C  [ucrtbase.dll+0x210b2]
+C  [KERNEL32.DLL+0x17c24]
+C  [ntdll.dll+0x6d4d1]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffe7e5946b8, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000022dbc2e9000 GCTaskThread "GC Thread#0" [stack: 0x0000008cb8f00000,0x0000008cb9000000] [id=17780]
+  0x0000022dbc30a800 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000008cb9000000,0x0000008cb9100000] [id=18132]
+  0x0000022dbc310800 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000008cb9100000,0x0000008cb9200000] [id=19372]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffe7ddc6f47]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000022dbc27ad30] Heap_lock - owner thread: 0x0000022dbc27f000
+
+Heap address: 0x0000000703600000, size: 4042 MB, Compressed Oops mode: Non-zero based: 0x0000000703600000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (2 events):
+Event: 0.014 Loaded shared library C:\Program Files\Java\bin\zip.dll
+Event: 0.015 Loaded shared library C:\Program Files\Java\bin\jimage.dll
+
+
+Dynamic libraries:
+0x00007ff6a7330000 - 0x00007ff6a733d000 	C:\Program Files\Java\bin\java.exe
+0x00007ffedc920000 - 0x00007ffedcb10000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffedc050000 - 0x00007ffedc102000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffeda720000 - 0x00007ffeda9c5000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffed5830000 - 0x00007ffed5848000 	C:\Program Files\Java\bin\jli.dll
+0x00007ffedb400000 - 0x00007ffedb594000 	C:\Windows\System32\USER32.dll
+0x00007ffed9890000 - 0x00007ffed98b1000 	C:\Windows\System32\win32u.dll
+0x00007ffedac20000 - 0x00007ffedac46000 	C:\Windows\System32\GDI32.dll
+0x00007ffed99f0000 - 0x00007ffed9b86000 	C:\Windows\System32\gdi32full.dll
+0x00007ffed98c0000 - 0x00007ffed995e000 	C:\Windows\System32\msvcp_win.dll
+0x0000022dba8d0000 - 0x0000022dba9ca000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffed7ec0000 - 0x00007ffed8144000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.1256_none_9e7e379be45e40e2\COMCTL32.dll
+0x00007ffedab20000 - 0x00007ffedabbe000 	C:\Windows\System32\msvcrt.dll
+0x00007ffedad70000 - 0x00007ffedb0a6000 	C:\Windows\System32\combase.dll
+0x00007ffedb0b0000 - 0x00007ffedb1d0000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffed9960000 - 0x00007ffed99e1000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffed4b60000 - 0x00007ffed4b75000 	C:\Program Files\Java\bin\VCRUNTIME140.dll
+0x00007ffedb7b0000 - 0x00007ffedb7de000 	C:\Windows\System32\IMM32.DLL
+0x00007ffeafc50000 - 0x00007ffeafcf4000 	C:\Program Files\McAfee\Endpoint Security\Threat Prevention\Ips\EpMPApi.dll
+0x00007ffedacc0000 - 0x00007ffedad63000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffedaa80000 - 0x00007ffedab17000 	C:\Windows\System32\sechost.dll
+0x00007ffed9e80000 - 0x00007ffed9edc000 	C:\Windows\System32\WINTRUST.dll
+0x00007ffed97d0000 - 0x00007ffed97e2000 	C:\Windows\System32\MSASN1.dll
+0x00007ffed9ce0000 - 0x00007ffed9e29000 	C:\Windows\System32\CRYPT32.dll
+0x000000005a520000 - 0x000000005a52c000 	C:\Program Files\McAfee\Endpoint Security\Threat Prevention\Ips\EpMPThe.dll
+0x00007ffeaab50000 - 0x00007ffeaab6b000 	C:\Program Files\McAfee\Endpoint Security\Threat Prevention\Ips\HIPHandlers64.dll
+0x00007ffedac50000 - 0x00007ffedaca2000 	C:\Windows\System32\SHLWAPI.dll
+0x00007ffe85660000 - 0x00007ffe856fb000 	C:\Program Files\Java\bin\msvcp140.dll
+0x00007ffe7dad0000 - 0x00007ffe7e636000 	C:\Program Files\Java\bin\server\jvm.dll
+0x00007ffedc8d0000 - 0x00007ffedc8d8000 	C:\Windows\System32\PSAPI.DLL
+0x00007ffecaee0000 - 0x00007ffecaee9000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffed6ec0000 - 0x00007ffed6ee4000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffed3610000 - 0x00007ffed361a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffedb1e0000 - 0x00007ffedb24f000 	C:\Windows\System32\WS2_32.dll
+0x00007ffed6e90000 - 0x00007ffed6ebd000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x00007ffed9e30000 - 0x00007ffed9e7a000 	C:\Windows\System32\cfgmgr32.dll
+0x00007ffed97f0000 - 0x00007ffed9801000 	C:\Windows\System32\kernel.appcore.dll
+0x00007ffed4b50000 - 0x00007ffed4b60000 	C:\Program Files\Java\bin\verify.dll
+0x00007ffec4f00000 - 0x00007ffec50f4000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ffec4ed0000 - 0x00007ffec4efa000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ffebfbc0000 - 0x00007ffebfbe6000 	C:\Program Files\Java\bin\java.dll
+0x00007ffea2dd0000 - 0x00007ffea2e08000 	C:\Program Files\Java\bin\jdwp.dll
+0x00007ffed4b30000 - 0x00007ffed4b47000 	C:\Program Files\Java\bin\zip.dll
+0x00007ffebfe20000 - 0x00007ffebfe2a000 	C:\Program Files\Java\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.1256_none_9e7e379be45e40e2;C:\Program Files\McAfee\Endpoint Security\Threat Prevention\Ips;C:\Program Files\Java\bin\server
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=127.0.0.1:50471 -Dfile.encoding=windows-1252 -Duser.country=US -Duser.language=en -Duser.variant 
+java_command: com.learnkafka.LibraryEventsProducerApplication
+java_class_path (initial): D:\Users\mguruvappan\Downloads\library-events-producer\build\classes\java\main;D:\Users\mguruvappan\Downloads\library-events-producer\build\resources\main;D:\Users\mguruvappan\.gradle\caches\modules-2\files-2.1\org.springframework.kafka\spring-kafka\2.6.5\4d64035f461fca24d3d8da52dbda0157687152fe\spring-kafka-2.6.5.jar;D:\Users\mguruvappan\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-data-jpa\2.4.5\cba91e070e601c55eec0d8a1948dcca15703ad37\spring-boot-starter-data-jpa-2.4.5.jar;D:\Users\mguruvappan\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-web\2.4.5\93cf2655557534e35723fbafa069bed2ee125832\spring-boot-starter-web-2.4.5.jar;D:\Users\mguruvappan\.gradle\caches\modules-2\files-2.1\com.h2database\h2\1.4.200\f7533fe7cb8e99c87a43d325a77b4b678ad9031a\h2-1.4.200.jar;D:\Users\mguruvappan\.gradle\caches\modules-2\files-2.1\org.springframework.data\spring-data-jpa\2.4.8\3b828cf72c68f3affc75809229fc729ab530c6af\spring-data-jpa-2.4.8.jar;D:\Users\mguruvappan\.gradle\caches\modules-2\files-2.1\org.springframework\spring-webmvc\5.3.6\a9bff0c28f90c73b0443de1d9299f32778ac8421\spring-webmvc-5.3.6.jar;D:\Users\mguruvappan\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-aop\2.4.5\853bfc5d1c867f66880971515bda82ecc737e839\spring-boot-starter-aop-2.4.5.jar;D:\Users\mguruvappan\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-jdbc\2.4.5\abcca18ef5a2c877a5574a492b570bb260640de3\spring-boot-starter-jdbc-2.4.5.jar;D:\Users\mguruvappan\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-json\2.4.5\5c1623aa53adf10cd98884f60db2d9f5958dbc28\spring-boot-starter-json-2.4.5.jar;D:\Users\mguruvappan\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter\2.4.5\5f5398f459beb958fc2ece1a433420bf03cec628\spring-boot-starter-2.4.5.jar;D:\Users\mguruvappan\.gradle\caches\modules-2\files-2.1\org.
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 266338304                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4238344192                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5836300                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122910970                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122910970                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 4238344192                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\RSA SecurID Token Common;C:\Program Files\RSA SecurID Token Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Java\bin;C:\Program Files (x86)\nodejs\;D:\Users\mguruvappan\AppData\Roaming\npm\node_modules\@angular\cli\bin;C:\Program Files\RSA SecurID Token Common\;D:\Users\mguruvappan\AppData\Local\JetBrains\IntelliJ IDEA Community Edition 2021.1.1\bin;;D:\Users\mguruvappan\AppData\Local\JetBrains\DataGrip 2021.1.1\bin;;D:\Users\mguruvappan\AppData\Roaming\npm;D:\Users\mguruvappan\AppData\Local\Programs\Git\cmd
+USERNAME=mguruvappan
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 12, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 18362 (10.0.18362.1110)
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 142 stepping 12, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, system-wide physical 16163M (4324M free)
+TotalPageFile size 16163M (AvailPageFile size 155M)
+current process WorkingSet (physical memory assigned to process): 11M, peak: 11M
+current process commit charge ("private bytes"): 62M, peak: 316M
+
+vm_info: OpenJDK 64-Bit Server VM (13+33) for windows-amd64 JRE (13+33), built on Aug  9 2019 11:21:18 by "mach5one" with unknown MS VC++:1916
+
+END.
